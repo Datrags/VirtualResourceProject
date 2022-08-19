@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://woodtext.tres" type="Material" id=1]
+[ext_resource path="res://metaltext.tres" type="Material" id=2]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="CylinderMesh" id=3]
+
+[node name="table" type="StaticBody"]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0018096, 0.00540477, 0.00544527 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 0.999337, 0, 0, 0, 0.0455658, 0, 0, 0, 0.999337, 0.00254107, 1.06111, -0.000206232 )
+use_in_baked_light = true
+mesh = SubResource( 2 )
+material/0 = ExtResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 0.250701, 0, 0, 0, 1, 0, 0, 0, 0.658407, 0, 0, 0 )
+use_in_baked_light = true
+mesh = SubResource( 3 )
+material/0 = ExtResource( 2 )
