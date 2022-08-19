@@ -1,9 +1,9 @@
 extends KinematicBody
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+onready var head = $Head
+onready var desc_label = $Control/Description
+onready var space_label = $Control/SpaceReady
 var mouse_sens = 0.03
 var speed = 10
 var h_acc = 6
@@ -13,9 +13,10 @@ var h_velocity = Vector3()
 var movement = Vector3()
 
 var mouse_mode = true
-onready var head = $Head
 
-var bookurl = null
+
+
+var book = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -33,8 +34,8 @@ func _input(event):
 		elif Input.is_action_just_pressed("ui_cancel") and not mouse_mode:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			mouse_mode = true
-		elif Input.is_action_just_pressed("ui_accept") and bookurl != null:
-			OS.shell_open(bookurl)
+		elif Input.is_action_just_pressed("ui_accept") and book:
+			OS.shell_open(book.bookurl)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -53,14 +54,21 @@ func _physics_process(delta):
 	h_velocity = h_velocity.linear_interpolate(direction * speed, h_acc * delta)
 	movement.z = h_velocity.z
 	movement.x = h_velocity.x
-	move_and_slide(movement, Vector3.UP)
+	movement = move_and_slide(movement, Vector3.UP)
+	
+	if book:
+		desc_label.text = book.book_name
+		space_label.visible = true
+	else:
+		space_label.visible = false
+		desc_label.text = ""
 
 
 func _on_Area_body_entered(body):
 	if body.get_meta("type") == "book":
-		bookurl = body.bookurl
+		book = body
 
 
 func _on_Area_body_exited(body):
 	if body.get_meta("type") == "book":
-		bookurl = null
+		book = null

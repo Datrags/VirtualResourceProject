@@ -2,7 +2,8 @@ extends StaticBody
 
 
 export(String) var bookurl = "https://www.amazon.com/ref=nav_logo"
-
+export(String) var book_name = ""
+export(String) var desc = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,6 +13,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#if Input.is_action_just_pressed("ui_accept"):
-	#	print(bookurl)
 	pass
