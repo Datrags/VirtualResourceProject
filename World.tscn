@@ -14,7 +14,7 @@
 [ext_resource path="res://bricktext.tres" type="Material" id=12]
 [ext_resource path="res://exterminatebrutescover.jpg" type="Texture" id=13]
 [ext_resource path="res://malcomxmoviecover.jpg" type="Texture" id=14]
-[ext_resource path="res://woodfloortext.tres" type="Material" id=15]
+[ext_resource path="res://metaltext.tres" type="Material" id=15]
 [ext_resource path="res://theodoracover.jpeg" type="Texture" id=16]
 [ext_resource path="res://Radio.tscn" type="PackedScene" id=17]
 [ext_resource path="res://nyt-ezraklein-albumartwork-3000px.jpeg" type="Texture" id=18]
@@ -99,7 +99,7 @@ environment = SubResource( 12 )
 transform = Transform( -0.992886, 0, -0.0193244, 0, 1.38767, 0, 0.0193244, 0, -0.992886, -2.18514, 2.45745, -30.8168 )
 
 [node name="Floor" type="StaticBody" parent="."]
-transform = Transform( 33.4924, 0, 0, 0, 0.5, 0, 0, 0, 41.9751, 0, 0, 0 )
+transform = Transform( 21.2991, 0, 0, 0, 0.5, 0, 0, 0, 32.663, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Floor"]
 shape = SubResource( 1 )
@@ -121,9 +121,10 @@ material/0 = SubResource( 11 )
 transform = Transform( -4.37114e-08, 0, 0.184541, 0, 3.98751, 0, -1, 0, -8.06656e-09, -9.39705, 4.11703, -1.84907 )
 
 [node name="EmpressTheodora2" parent="Shelves/BookShelf2" instance=ExtResource( 1 )]
-transform = Transform( 0.136644, 0, 0.0424099, 0, 0.176786, 0, -0.0504273, 0, 3.37449, -0.0171261, 0.212212, -18.6789 )
+transform = Transform( 0.136644, 0, 0.0424099, 0, 0.176786, 0, -0.0504273, 0, 3.37449, -0.0171255, 0.212211, -18.6789 )
 bookurl = "https://www.amazon.com/Empress-Theodora-Partner-Justinian/dp/0292702701/ref=sr_1_2?keywords=empress+theodora&qid=1660848870&s=books&sprefix=The+empress+the%2Cstripbooks%2C66&sr=1-2"
 book_name = "The Empress Theodora: Partner of Justinian"
+desc = "Book"
 
 [node name="MeshInstance" parent="Shelves/BookShelf2/EmpressTheodora2" index="0"]
 material/0 = SubResource( 16 )
@@ -132,8 +133,10 @@ material/0 = SubResource( 16 )
 transform = Transform( 0.136644, 0, 0.0424099, 0, 0.176786, 0, -0.0504273, 0, 3.37449, 0.753451, -0.626717, -18.9633 )
 bookurl = "https://www.amazon.com/Sometimes-People-March-Tessa-Allen/dp/0062991183/ref=sr_1_1?keywords=sometimes+people+march&qid=1660926751&sprefix=sometimes+people+%2Caps%2C61&sr=8-1"
 book_name = "Sometimes People March"
+desc = "Book"
 
 [node name="MeshInstance" parent="Shelves/BookShelf2/Sometimes" index="0"]
+transform = Transform( 0.506907, 0, 5.96046e-08, 0, 0.999626, 0, -1.86265e-09, 0, 0.999626, -0.00231743, 0.00586987, -0.000404358 )
 material/0 = SubResource( 19 )
 
 [node name="BookShelf" parent="Shelves" instance=ExtResource( 2 )]
@@ -143,6 +146,7 @@ transform = Transform( -4.37114e-08, 0, 0.184541, 0, 3.98751, 0, -1, 0, -8.06656
 transform = Transform( 0.136644, 0, 0.0424099, 0, 0.176786, 0, -0.0504273, 0, 3.37449, 0.722814, -0.639503, -8.54683 )
 bookurl = "https://www.amazon.com/Interpreting-National-History-Classrooms-Communities/dp/0415960843"
 book_name = "Terrie Epstein - Interpreting National History"
+desc = "Book"
 
 [node name="MeshInstance" parent="Shelves/BookShelf/InterpretingNationalHistory" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, -9.31323e-10, 0, 1, -0.00231791, 0.0058701, -0.000404358 )
@@ -152,6 +156,7 @@ material/0 = SubResource( 3 )
 transform = Transform( 0.136644, 0, 0.0424099, 0, 0.176786, 0, -0.0504273, 0, 3.37449, 0.528208, -0.635226, -19.0699 )
 bookurl = "https://www.amazon.com/Autobiography-Malcolm-Told-Alex-Haley/dp/0345350685"
 book_name = "The Autobiography of Malcolm X: As Told to Alex Haley"
+desc = "Book"
 
 [node name="MeshInstance" parent="Shelves/BookShelf/MalcomX" index="0"]
 material/0 = SubResource( 4 )
@@ -160,6 +165,7 @@ material/0 = SubResource( 4 )
 transform = Transform( 0.136644, 0, 0.0424099, 0, 0.176786, 0, -0.0504273, 0, 3.37449, 0.505229, -0.638712, -29.6265 )
 bookurl = "https://www.amazon.com/Testament-Hope-Essential-Writings-Speeches/dp/0060646918/ref=asc_df_0060646918/?tag=hyprod-20&linkCode=df0&hvadid=312115051380&hvpos=&hvnetw=g&hvrand=8807295751711883791&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9004163&hvtargid=pla-432746781299&psc=1"
 book_name = "A Testament of Hope: The Essential Writings and Speeches"
+desc = "Book"
 
 [node name="MeshInstance" parent="Shelves/BookShelf/ATestamentOfHope" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00231886, 0.0058701, -0.000404358 )
@@ -169,6 +175,7 @@ material/0 = SubResource( 5 )
 transform = Transform( 0.136644, 0, 0.0424099, 0, 0.176786, 0, -0.0504273, 0, 3.37449, 0.421827, 0.212212, -18.8409 )
 bookurl = "https://www.youtube.com/watch?v=x82C-BhqzkE"
 book_name = "I Am Malala: The Girl Who Stood Up for Education and Was Shot by the Taliban"
+desc = "Book"
 
 [node name="MeshInstance" parent="Shelves/BookShelf/IAmMalala" index="0"]
 material/0 = SubResource( 6 )
@@ -180,6 +187,7 @@ transform = Transform( -2.24278, 0, -1.50119e-07, 0, 1.38923, 0, 3.3865e-07, 0, 
 transform = Transform( 0.00414927, 0, -0.277661, 0, 0.50743, 0, 0.137442, 0, 0.0426576, 0.70106, 0.202229, 0.266035 )
 bookurl = "https://www.hbo.com/exterminate-all-the-brutes"
 book_name = "Exterminate all the Brutes"
+desc = "TV Series"
 
 [node name="MeshInstance" parent="Shelves/SmallShelf/ExterminateAllBrutes" index="0"]
 transform = Transform( 1, 0, 2.98023e-08, 0, 1, 0, -9.31323e-10, 0, 1, -0.00231743, 0.0058701, -0.000403836 )
@@ -189,6 +197,7 @@ material/0 = SubResource( 14 )
 transform = Transform( 0.00414926, 0, -0.277661, 0, 0.507429, 0, 0.137442, 0, 0.0426576, 6.3783, -0.166342, 0.137082 )
 bookurl = "https://www.imdb.com/title/tt0104797/"
 book_name = "Malcolm X (1992)"
+desc = "Movie"
 
 [node name="MeshInstance" parent="Shelves/SmallShelf/MalcomXMovie" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.70325, 3.27123, 18.6052 )
@@ -199,34 +208,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.99483, 3.48807, 18.639 )
 
 [node name="Walls" type="Node" parent="."]
 
-[node name="Wall" type="StaticBody" parent="Walls"]
-transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 1, 0, 0, 0 )
-
-[node name="MeshInstance" type="MeshInstance" parent="Walls/Wall"]
-use_in_baked_light = true
-mesh = SubResource( 7 )
-material/0 = ExtResource( 12 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Walls/Wall"]
-shape = SubResource( 8 )
-
-[node name="TV" type="StaticBody" parent="Walls/Wall"]
-transform = Transform( 0.25, 0, 0, 0, 0.125, 0, 0, 0, 1, 0, 0.546687, -2.47754 )
-
-[node name="MeshInstance" type="MeshInstance" parent="Walls/Wall/TV"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.86922 )
-mesh = SubResource( 7 )
-material/0 = SubResource( 9 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Walls/Wall/TV"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.09762 )
-shape = SubResource( 8 )
-
 [node name="Wall2" type="StaticBody" parent="Walls"]
-transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 1, 0, 0, -37.9151 )
+transform = Transform( 20, 0, 0, 0, 12.0892, 0, 0, 0, 1, 0, 5.00294, -37.9151 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Walls/Wall2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 use_in_baked_light = true
 mesh = SubResource( 7 )
 material/0 = ExtResource( 12 )
@@ -234,11 +219,22 @@ material/0 = ExtResource( 12 )
 [node name="CollisionShape" type="CollisionShape" parent="Walls/Wall2"]
 shape = SubResource( 8 )
 
+[node name="Wall5" type="StaticBody" parent="Walls"]
+transform = Transform( 20, 0, 0, 0, 12.0892, 0, 0, 0, 1, 0, 5.00294, 0.083046 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Walls/Wall5"]
+use_in_baked_light = true
+mesh = SubResource( 7 )
+material/0 = ExtResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/Wall5"]
+shape = SubResource( 8 )
+
 [node name="Wall3" type="StaticBody" parent="Walls"]
-transform = Transform( -8.74228e-07, 0, 1, 0, 20, 0, -20, 0, -4.37114e-08, 20.0407, 0, -17.6454 )
+transform = Transform( -8.74228e-07, 0, 1, 0, 7.79443, 0, -20, 0, -4.37114e-08, 20.0407, 8.21271, -17.6454 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Walls/Wall3"]
-transform = Transform( 1, 0, -6.66134e-16, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform = Transform( 1, 0, 2.22045e-16, 0, 1.12337, 0, 0, 0, 1, 0, 0, 0 )
 use_in_baked_light = true
 mesh = SubResource( 7 )
 material/0 = ExtResource( 12 )
@@ -247,7 +243,7 @@ material/0 = ExtResource( 12 )
 shape = SubResource( 8 )
 
 [node name="Wall4" type="StaticBody" parent="Walls"]
-transform = Transform( -8.74228e-07, 0, 1, 0, 20, 0, -20, 0, -4.37114e-08, -20.0751, 0, -17.6454 )
+transform = Transform( -8.74228e-07, 0, 1, 0, 8.8977, 0, -20, 0, -4.37114e-08, -20.0751, 8.2925, -17.6454 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Walls/Wall4"]
 transform = Transform( 1, 0, -4.44089e-16, 0, 1, 0, -5.68434e-14, 0, 1, 0, 0, 0 )
@@ -258,16 +254,25 @@ material/0 = ExtResource( 12 )
 [node name="CollisionShape" type="CollisionShape" parent="Walls/Wall4"]
 shape = SubResource( 8 )
 
-[node name="Chairs" type="Node" parent="."]
+[node name="TV" type="StaticBody" parent="Walls"]
+transform = Transform( 5, 0, 0, 0, 2.5, 0, 0, 0, 1, 0, 10.9337, -2.47754 )
 
-[node name="chair3" parent="Chairs" instance=ExtResource( 11 )]
-transform = Transform( 0.675931, 0, 0, 0, 0.771583, 0, 0, 0, 1, -7.94686, 0.523529, -25.1375 )
+[node name="MeshInstance" type="MeshInstance" parent="Walls/TV"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.86922 )
+mesh = SubResource( 7 )
+material/0 = SubResource( 9 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/TV"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.09762 )
+shape = SubResource( 8 )
+
+[node name="Chairs" type="Node" parent="."]
 
 [node name="chair" parent="Chairs" instance=ExtResource( 11 )]
 transform = Transform( 0.675931, 0, 0, 0, 0.771583, 0, 0, 0, 1, 4.67653, 0.523529, -27.6899 )
 
 [node name="chair2" parent="Chairs" instance=ExtResource( 11 )]
-transform = Transform( 0.675931, 0, 0, 0, 0.771583, 0, 0, 0, 1, -1.99251, 0.523529, -25.1375 )
+transform = Transform( 0.477955, 0, 0.707107, 0, 0.771583, 0, -0.477955, 0, 0.707107, -9.62193, 0.523529, -25.1375 )
 
 [node name="chair4" parent="Chairs" instance=ExtResource( 11 )]
 transform = Transform( -0.579362, 0, 0.515098, 0, 0.771583, 0, -0.348171, 0, -0.857131, -0.493355, 0.523529, -9.74274 )
@@ -287,6 +292,7 @@ transform = Transform( 0.65033, -0.00189592, 0.75964, 0.023069, 0.999745, -0.012
 transform = Transform( 0.0355078, 0, 0.153458, 0, 0.359047, 0, -0.0485269, 0, 0.112287, -0.565098, 1.47135, -0.704722 )
 bookurl = "https://podcasts.apple.com/us/podcast/nikole-hannah-jones-ta-nehisi-coates-on-fight-over/id1548604447?i=1000530493907"
 book_name = "The Ezra Klein Show - Nikole Hannah-Jones and Ta-Nehisi Coates on the Fight Over U.S. History"
+desc = "Podcast"
 
 [node name="MeshInstance" parent="Tables/table2/EzraPodcast" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00231934, 0.00586987, -0.000402451 )
@@ -296,6 +302,7 @@ material/0 = SubResource( 17 )
 transform = Transform( 0.0262551, 0, 0.0153446, 0, 0.359047, 0, -0.00212562, 0, 0.189532, 0.712468, 1.44442, 0.246655 )
 bookurl = "https://www.aboutracepodcast.com/"
 book_name = "About Race Podcast with Reni Eddo-Lodge"
+desc = "Podcast"
 
 [node name="MeshInstance" parent="Tables/table2/AboutRace" index="0"]
 transform = Transform( 1, 0, -1.19209e-07, 0, 1, 0, 1.49012e-08, 0, 1, -0.00231934, 0.00586987, -0.000402451 )

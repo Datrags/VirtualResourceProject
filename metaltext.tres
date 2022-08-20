@@ -11,3 +11,4 @@ metallic_texture = ExtResource( 2 )
 normal_enabled = true
 normal_scale = 3.64
 normal_texture = ExtResource( 3 )
+uv1_scale = Vector3( 10, 7, 1 )

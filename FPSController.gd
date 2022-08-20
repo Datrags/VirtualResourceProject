@@ -4,7 +4,7 @@ extends KinematicBody
 onready var head = $Head
 onready var desc_label = $Control/Description
 onready var space_label = $Control/SpaceReady
-var mouse_sens = 0.03
+var mouse_sens = 0.5
 var speed = 10
 var h_acc = 6
 
@@ -57,7 +57,7 @@ func _physics_process(delta):
 	movement = move_and_slide(movement, Vector3.UP)
 	
 	if book:
-		desc_label.text = book.book_name
+		desc_label.text = book.book_name + "\n\n" + book.desc
 		space_label.visible = true
 	else:
 		space_label.visible = false
